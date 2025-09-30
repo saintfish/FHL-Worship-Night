@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//信望爱团契//Worship Night//EN
+BEGIN:VEVENT
+UID:worship-night-20251107@example.org
+DTSTAMP:20250929T000000Z
+DTSTART;TZID=America/Chicago:20251107T183000
+DTEND;TZID=America/Chicago:20251107T210000
+SUMMARY:信望爱团契敬拜之夜
+DESCRIPTION:一起用诗歌与祷告敬拜神，欢迎新朋友参与。\n\n活动网站：https://fhl-worship-night.pages.dev/
+LOCATION:Tech Building L361, 2145 Sheridan Rd, Evanston, IL
+END:VEVENT
+END:VCALENDAR
