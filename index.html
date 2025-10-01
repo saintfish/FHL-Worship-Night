@@ -192,6 +192,7 @@
 
     .kpi {
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
       align-items: center;
       color: #a7f3d0;
@@ -208,7 +209,6 @@
       display: block;
       aspect-ratio: 16/9;
       width: 100%;
-      ;
       border-radius: var(--radius);
       box-shadow: var(--shadow)
     }
@@ -446,8 +446,13 @@
                 60208</a></div>
           </div>
           <div class=" card">
-            <div class="kpi">🗓️<strong>晚餐：</strong> <span>18:30</span>｜<strong>敬拜：</strong>
-              <span>19:30</span>｜<strong>结束：</strong> <span>21:00</span>
+            <div class="kpi">
+              <div>🗓️</div>
+              <div><strong>晚餐：</strong> 18:30</div>
+              <div>｜</div>
+              <div><strong>敬拜：</strong> 19:30</div>
+              <div>｜</div>
+              <div><strong>结束：</strong> 21:00</div>
             </div>
           </div>
         </div>
