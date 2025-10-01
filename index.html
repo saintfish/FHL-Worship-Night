@@ -62,7 +62,9 @@
       top: 0;
       z-index: 30;
       backdrop-filter: saturate(1.2) blur(10px);
-      background: linear-gradient(180deg, #0b1220cc, #0b122000)
+      background: linear-gradient(180deg, #0b1220cc, #0b122000);
+      transform: translateY(0);
+      transition: transform 0.4s ease-in-out;
     }
 
     nav {
@@ -396,6 +398,10 @@
       .contact {
         grid-template-columns: 1fr
       }
+
+      header.hidden {
+        transform: translateY(-100%);
+      }
     }
 
     @media (max-width: 560px) {
@@ -406,6 +412,7 @@
       .title {
         font-size: 2rem
       }
+
     }
   </style>
 </head>
@@ -667,6 +674,26 @@
       <div><a href="#home" class="secondary btn">返回顶部 ↑</a></div>
     </div>
   </footer>
+
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      if (window.innerWidth <= 960) { // only small screens
+        if (st > lastScrollTop) {
+          // scrolling down
+          header.classList.add("hidden");
+        } else {
+          // scrolling up
+          header.classList.remove("hidden");
+        }
+      }
+      lastScrollTop = st <= 0 ? 0 : st; // avoid negative scroll
+    }, false);
+  </script>
+
 </body>
 
 </html>
