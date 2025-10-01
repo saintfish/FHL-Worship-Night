@@ -165,11 +165,14 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      white-space: nowrap;
     }
 
     .hero-cards .card {
       flex-grow: 1;
+    }
+
+    .hero-cards strong {
+      white-space: nowrap;
     }
 
     .card {
@@ -191,7 +194,7 @@
       display: flex;
       gap: 8px;
       align-items: center;
-      color: #a7f3d0
+      color: #a7f3d0;
     }
 
     .hero-cta {
@@ -443,7 +446,8 @@
                 60208</a></div>
           </div>
           <div class=" card">
-            <div class="kpi">🗓️<strong>晚餐：</strong> 18:30｜<strong>敬拜：</strong> 19:30｜<strong>结束：</strong> 21:00
+            <div class="kpi">🗓️<strong>晚餐：</strong> <span>18:30</span>｜<strong>敬拜：</strong>
+              <span>19:30</span>｜<strong>结束：</strong> <span>21:00</span>
             </div>
           </div>
         </div>
